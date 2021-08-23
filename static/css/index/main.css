@@ -1,0 +1,36 @@
+/* Index */
+
+.index{
+	text-align: center;
+	padding: 100px 0 0 0;
+}
+
+.index__title{
+	font-size: 30px;
+	padding: 10px;
+}
+
+.index__text{
+	font-size: 20px;
+	padding: 30px;
+}
+
+.index_button{
+	padding: 15px;
+}
+
+.index__link{
+	display: inline-block;
+	vertical-align: top;
+	padding: 10px 30px;
+	font-size: 20px;
+	font-weight: 700;
+	border: 3px solid #fff;
+	color: #fff;
+	transition: background .3s linear, color .3s linear;
+}
+
+.index__link:hover{
+	background-color: #fff;
+	color: #333;
+}

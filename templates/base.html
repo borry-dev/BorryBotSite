@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %}{% endblock %} | BorryBot</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename = 'css/main.css') }}">
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&amp;display=swap" rel="stylesheet"> 
+	{% block head %}{% endblock %}
+</head>
+<body>
+
+	<header>
+		<div class="header">
+			<div class="menu">
+				<div class="menu__left">
+					<nav class="nav__left">
+						<h2 class="nav__logo"><a href="/">BorryBot</a></h2>
+					</nav>
+				</div>
+				<div class="menu__right">
+					<nav class="nav__right">
+						<a class="nav__link" href="/commands">Команды</a>
+						<a class="nav__link" href="/support">Поддержка</a>
+						{% if not authorized %}
+						<a class="nav__link" href="/login">Войти</a>
+						{% else %}
+						<a class="nav__link" href="/dashboard">Панель</a>
+						{% endif %}
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	{% block body %}{% endblock %}
+
+	<footer class="footer">
+		<p class="footer__text">BorryBot | 2021</p>
+	</footer>
+
+</body>
+</html>

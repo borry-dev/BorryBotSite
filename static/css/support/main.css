@@ -1,0 +1,32 @@
+/* Support */
+
+.support{
+	text-align: center;
+	padding: 30px;
+}
+
+.support__title{
+	text-align: center;
+	font-size: 30px;
+	padding: 30px;
+}
+
+.support__links{
+	text-align: center;
+	font-size: 25px;
+	padding: 25px;
+}
+
+.support__link{
+	display: inline-block;
+	vertical-align: top;
+	align-items: center;
+	margin: 0 10px;
+	font-weight: 500;
+
+	transition: color .2s linear;	
+}
+
+.support__link:hover{
+	color: #33c5ff;
+}

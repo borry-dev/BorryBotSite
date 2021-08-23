@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Главная
+{% endblock %}
+
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/index/main.css') }}">
+{% endblock %}
+
+
+{% block body %}
+	<div class="index">
+		<div class="index__title">
+			<h1>BorryBot</h1>
+		</div>
+		<div class="index__text">
+			<h2>Discord бот для модерации вашего сервера!</h2>
+		</div>
+		<div class="index__button">
+			<a class="index__link" target="_blank" href="https://discord.com/api/oauth2/authorize?client_id=862195560019001344&permissions=8&scope=bot">Пригласить бота на свой сервер</a>
+		</div>
+	</div>
+{% endblock %}

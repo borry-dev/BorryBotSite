@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Панель
+{% endblock %}
+
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/dashboard/main.css') }}">
+{% endblock %}
+
+
+{% block body %}
+<div class="dashboard">
+	<div class="dashboard__title">
+		<h1>Добро пожаловать, {{ user.name }}#{{ user.discriminator }}</h1>
+	</div>
+	<div class="developer">
+		<h2>Страница находиться в разработке</h2>
+	</div>
+</div>
+{% endblock %}

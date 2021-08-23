@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Поддержка
+{% endblock %}
+
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'css/support/main.css') }}">
+{% endblock %}
+
+
+{% block body %}
+<div class="support">
+	<div class="support__title">
+		<h1>Поддержка</h1>
+	</div>
+	<div class="support__links">
+		<h2>Discord сервер: <a class="support__link" href="https://discord.gg/FJRj894gUn">Вступить</a></h2>
+	</div>
+</div>
+{% endblock %}
