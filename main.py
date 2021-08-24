@@ -62,7 +62,7 @@ def logout():
 
 @application.route('/version')
 def version():
-	return 'v0.1.1(от 23.08.2021)'
+	return 'v0.1.2(от 24.08.2021)'
 
 
 
