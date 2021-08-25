@@ -3,17 +3,18 @@ from flask_discord import DiscordOAuth2Session, Unauthorized
 from discord.ext import ipc
 
 import os
+import secret
 
 application = Flask(__name__)
 
-ipc_client = ipc.Client( secret_key = "" )
+ipc_client = ipc.Client( secret_key = secret.IPC_SECRET_KEY )
 #os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "true"
 
 
-application.config['SECRET_KEY'] = ''
-application.config['DISCORD_CLIENT_ID'] = 
-application.config['DISCORD_CLIENT_SECRET'] = ''
-application.config['DISCORD_REDIRECT_URI'] = 'https://borry.ru/callback'
+application.config['SECRET_KEY'] = secret.SECRET_KEY
+application.config['DISCORD_CLIENT_ID'] = secret.DISCORD_CLIENT_ID
+application.config['DISCORD_CLIENT_SECRET'] = secret.DISCORD_CLIENT_SECRET
+application.config['DISCORD_REDIRECT_URI'] = secret.DISCORD_REDIRECT_URI
 
 discord = DiscordOAuth2Session(application)
 
@@ -62,7 +63,7 @@ def logout():
 
 @application.route('/version')
 def version():
-	return 'v0.1.2(от 24.08.2021)'
+	return 'v0.1.3(от 25.08.2021)'
 
 
 
